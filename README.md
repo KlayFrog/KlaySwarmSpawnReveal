@@ -81,7 +81,7 @@ This measure is to avoid any unwanted leaks from people trying the public Vercel
 
 **NEVER SHARE WITH ANYONE YOUR TEST PROJECT OR ITS VERCEL LINK**
 
-If needed, contact Klay on Discord (@klaytheguildless) to help you link Github and Vercel and add new projects
+If needed, contact Klay on Discord (@klaytheguildless) to help you link Github and Vercel and add new project
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Original README:
