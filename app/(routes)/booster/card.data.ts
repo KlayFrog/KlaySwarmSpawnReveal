@@ -8,7 +8,5 @@ const COMMON_CARDS: CardType[] = Array.from({ length: 12 }, (_, i) => ({
 }));
 
 export const ALL_CARDS: CardType[] = [
-  ...ENERGY_CARDS,
-  ...SPECIAL_CARDS,
   ...COMMON_CARDS,
 ];
