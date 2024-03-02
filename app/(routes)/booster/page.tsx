@@ -2,7 +2,6 @@
 
 import { Button } from "@/app/_components/button";
 import { BoosterCard } from "./card";
-import { getRandomBooster } from "./card.utils";
 import { useReducer, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { CardType, FlippableCardType } from "./card.model";
