@@ -61,8 +61,10 @@ to
 ```
 
 # IMPORTANT !!!
-Since it will be public at one point, create a clone project of this one and make the changes and tests on the clone to avoid any unwanted leaks from people trying the original Vercel link (when swarm is on, add the changes on this original project and share its Vercel link)
-## NEVER SHARE WITH ANYONE YOUR CLONED PROJECT OR ITS VERCEL LINK
+Create a clone project of this one
+Choose either to be the test project (private Vercel link, edit whenever you want), and the other will become the "public" one (publicly posted Vercel link, only edit right before a swarm is about to start)
+This measure is to avoid any unwanted leaks from people trying the public Vercel link between swarms
+## NEVER SHARE WITH ANYONE YOUR TEST PROJECT OR ITS VERCEL LINK
 If needed, contact Klay on Discord (@klaytheguildless) to help you link Github and Vercel and add new projects
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
