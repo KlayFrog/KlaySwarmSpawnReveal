@@ -62,7 +62,7 @@ to
 
 # IMPORTANT !!!
 Since it will be public at one point, create a clone project of this one and make the changes and tests on the clone to avoid any unwanted leaks from people trying the original Vercel link (when swarm is on, add the changes on this original project and share its Vercel link)
-## NEVER SHARE WITH ANYONE YOUR CLONED PROJECT OR ITS VERCEL LINK not even Staff members they can't be trusted there are rats among your people
+## NEVER SHARE WITH ANYONE YOUR CLONED PROJECT OR ITS VERCEL LINK
 If needed, contact Klay on Discord (@klaytheguildless) to help you link Github and Vercel and add new projects
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
