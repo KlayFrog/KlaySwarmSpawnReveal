@@ -1,10 +1,16 @@
 # Add/Change images of Swarm Pokémon:
 <sub>In this exemple, the base project has 12 images of 128x93 pixels, and you want it to hae 14 images of 200x200 pixels</sub>
+
 Go in *public/images/cards/common*
+
 Delete all images but **back.png**
+
 Add your image files (**must be .png files**) (**must all have the same dimensions**) (**if dimensions are different between these images and back.png, edit back.png to have the same dimensions**, in this exemple 200x200 pixels)
+
 Rename them numerically (**1.png**, **2.png**, **3.png** ...) (for this exemple, there will be 14 different species = 14 different images, so up to **14.png**)
+
 Go in *app/(routes)/booster*
+
 In **card.data.ts**, change line 5 from
 ```
 const COMMON_CARDS: CardType[] = Array.from({ length: 12 }, (_, i) => ({
@@ -44,11 +50,17 @@ To
 
 # Change the opening image:
 <sub>In this exemple, the base project has an opening image of 200x181 pixels, and you want to replace it with an opening image of 800x800 pixels</sub>
+
 Go in *public/images*
+
 Delete **main.png**
+
 Add the new opening image (**must be a .png file**)
+
 Rename it as **main.png**
+
 Go in *app/(routes)*
+
 In **page.tsx**, change lines 11 - 12 from
 ```
           width={200}
@@ -62,9 +74,13 @@ to
 
 # IMPORTANT !!!
 Create a clone project of this one
+
 Choose either to be the test project (private Vercel link, edit whenever you want), and the other will become the "public" one (publicly posted Vercel link, only edit right before a swarm is about to start)
+
 This measure is to avoid any unwanted leaks from people trying the public Vercel link between swarms
-## NEVER SHARE WITH ANYONE YOUR TEST PROJECT OR ITS VERCEL LINK
+
+**NEVER SHARE WITH ANYONE YOUR TEST PROJECT OR ITS VERCEL LINK**
+
 If needed, contact Klay on Discord (@klaytheguildless) to help you link Github and Vercel and add new projects
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
