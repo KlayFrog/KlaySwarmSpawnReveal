@@ -6,6 +6,7 @@ import { getRandomBooster } from "./card.utils";
 import { useReducer, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { CardType, FlippableCardType } from "./card.model";
+import { getAllCommonCards } from "./card.utils";
 
 type BoosterCard = FlippableCardType & { key: string };
 
@@ -44,13 +45,13 @@ function reducer(state: BoosterState, action: BoosterAction): BoosterState {
 }
 
 const initialState: BoosterState = {
-  cards: getRandomBooster().map((card) => ({
-    ...card,
-    key: uuidv4(),
-    flipped: false,
+  cards: getAllCommonCards().map((card) => ({
+     ...card,
+     key: uuidv4(),
+     flipped: false,
   })),
   allCardFlipped: false,
-};
+ };
 
 export default function BoosterIndex() {
   const [state, dispatch] = useReducer(reducer, initialState);
