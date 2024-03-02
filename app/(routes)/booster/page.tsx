@@ -31,7 +31,7 @@ function reducer(state: BoosterState, action: BoosterAction): BoosterState {
     case "openNewPack":
       return {
         ...state,
-        cards: getRandomBooster().map((card) => ({
+          cards: getAllCommonCards().map((card) => ({
           ...card,
           key: uuidv4(),
           flipped: false,
