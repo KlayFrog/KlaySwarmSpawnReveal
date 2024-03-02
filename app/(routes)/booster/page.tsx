@@ -77,7 +77,7 @@ export default function BoosterIndex() {
           }
           disabled={state.allCardFlipped}
         >
-          Flip all cards
+          Reveal all
         </Button>
       )}
     </main>

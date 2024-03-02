@@ -8,8 +8,8 @@ export default function Home() {
         <Image
           src="/images/main.png"
           alt="Main Image"
-          width={128}
-          height={192}
+          width={200}
+          height={181}
           className="pixelated"
           draggable={false}
         />
