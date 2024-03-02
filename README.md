@@ -1,112 +1,69 @@
-# Help to modify values of sections:
-
-## Common card: (exemple 17.png)
-go in public/images/cards/common
-add _17.png_
-go in **app/(routes)/booster**
-in **card.data.ts**, change line 13 from
+# Add/Change images of Swarm Pokémon:
+<sub>In this exemple, the base project has 12 images of 128x93 pixels, and you want it to hae 14 images of 200x200 pixels</sub>
+Go in *public/images/cards/common*
+Delete all images but **back.png**
+Add your image files (**must be .png files**) (**must all have the same dimensions**) (**if dimensions are different between these images and back.png, edit back.png to have the same dimensions**, in this exemple 200x200 pixels)
+Rename them numerically (**1.png**, **2.png**, **3.png** ...) (for this exemple, there will be 14 different species = 14 different images, so up to **14.png**)
+Go in *app/(routes)/booster*
+In **card.data.ts**, change line 5 from
 ```
-const COMMON_CARDS: CardType[] = Array.from({ length: 16 }, (_, i) => ({
+const COMMON_CARDS: CardType[] = Array.from({ length: 12 }, (_, i) => ({
 ```
-to
+To
 ```
-const COMMON_CARDS: CardType[] = Array.from({ length: 17 }, (_, i) => ({
+const COMMON_CARDS: CardType[] = Array.from({ length: 14 }, (_, i) => ({
 ```
-
-## Special card: (exemple 11.png)
-go in **public/images/cards/special**
-add _11.png_
-go in **app/(routes)/booster**
-in **card.data.ts**, change line 9 from
+In **card.tsx**, change line 21 from
 ```
-const SPECIAL_CARDS: CardType[] = Array.from({ length: 10 }, (_, i) => ({
+"w-[128px] h-[93px] relative transition duration-500",
 ```
-to
+To
 ```
-const SPECIAL_CARDS: CardType[] = Array.from({ length: 11 }, (_, i) => ({
+"w-[200px] h-[200px] relative transition duration-500",
 ```
-
-## Energy card: (exemple 11.png)
-go in **public/images/cards/energy**
-add _11.png_
-go in **app/(routes)/booster**
-in **card.data.ts**, change line 5 from
+Change lines 34 - 35 from
 ```
-const ENERGY_CARDS: CardType[] = Array.from({ length: 10 }, (_, i) => ({
+        width={128}
+        height={93}
 ```
-to
+To
 ```
-const ENERGY_CARDS: CardType[] = Array.from({ length: 11 }, (_, i) => ({
+        width={200}
+        height={200}
 ```
-
-## Number of cards:
-go in **app/(routes)/booster**
-in **card.utils.ts**, change the quantity from line 19 to 21
-
-## Add a new category of cards: (example rare cards, 6 cards, 1 in booster, between common and special)
-go in **public/images/cards**
-add _rare_ folder
-go in **public/images/cards/rare**
-add _1.png_, _2.png_, _3.png_, _4.png_, _5.png_, _6.png_, _back.png_
-go **in app/(routes)/booster**
-in **card.data.ts**, change line 16 from
+Change lines 41 - 42 from
 ```
-}));
+        width={128}
+        height={93}
 ```
-to
+To
 ```
-const RARE_CARDS: CardType[] = Array.from({ length: 6 }, (_, i) => ({
-  category: "rare",
-  id: i + 1,
-}));
-```
-and line 22 from
-```
-];
-```
-to
-```
-  ...RARE_CARDS,
-];
-```
-in **card.model.ts**, change line 1 from
-```
-export type CardCategoryType = "energy" | "common" | "special";
-```
-to
-```
-export type CardCategoryType = "energy" | "common" | "special" | "rare";
-```
-in **card.tsx**, change lines 56 to 59 from
-```
-    default:
-      return `/images/cards/special`;
-  }
-};
-```
-to
-```
-      return `/images/cards/special`;
-    case "rare":
-    default:
-      return `/images/cards/rare`;
-  }
-};
-```
-in **card.utils.ts**, change lines 20 to 22 from
-```
-  ["special", 1],
-  ["energy", 1],
-];
-```
-to
-```
-  ["rare", 1],
-  ["special", 1],
-  ["energy", 1],
-];
+        width={200}
+        height={200}
 ```
 
+# Change the opening image:
+<sub>In this exemple, the base project has an opening image of 200x181 pixels, and you want to replace it with an opening image of 800x800 pixels</sub>
+Go in *public/images*
+Delete **main.png**
+Add the new opening image (**must be a .png file**)
+Rename it as **main.png**
+Go in *app/(routes)*
+In **page.tsx**, change lines 11 - 12 from
+```
+          width={200}
+          height={181}
+```
+to
+```
+          width={800}
+          height={800}
+```
+
+# IMPORTANT !!!
+Since it will be public at one point, create a clone project of this one and make the changes and tests on the clone to avoid any unwanted leaks from people trying the original Vercel link (when swarm is on, add the changes on this original project and share its Vercel link)
+## NEVER SHARE WITH ANYONE YOUR CLONED PROJECT OR ITS VERCEL LINK not even Staff members they can't be trusted there are rats among your people
+If needed, contact Klay on Discord (@klaytheguildless) to help you link Github and Vercel and add new projects
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Original README:
