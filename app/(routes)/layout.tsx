@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Klay's Booster Pack Opening Simulator",
+  title: "PWO Swarm Spawn Reveal",
 };
 
 export default function RootLayout({

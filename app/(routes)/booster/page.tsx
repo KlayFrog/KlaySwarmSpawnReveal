@@ -77,17 +77,6 @@ export default function BoosterIndex() {
           }
           disabled={!state.allCardFlipped}
         >
-          Open a new pack
-        </Button>
-      ) : (
-        <Button
-          onClick={() =>
-            dispatch({
-              type: "flipAllCards",
-            })
-          }
-          disabled={state.allCardFlipped}
-        >
           Flip all cards
         </Button>
       )}
