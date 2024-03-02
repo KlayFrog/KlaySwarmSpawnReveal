@@ -68,19 +68,7 @@ export default function BoosterIndex() {
           />
         ))}
       </div>
-      {/* Removed the "Open A New Pack" button */}
-      {state.allCardFlipped ? (
-        <Button
-          onClick={() =>
-            dispatch({
-              type: "flipAllCards",
-            })
-          }
-          disabled={!state.allCardFlipped}
-        >
-          Flip all cards
-        </Button>
-      ) : (
+      {!state.allCardFlipped && (
         <Button
           onClick={() =>
             dispatch({
