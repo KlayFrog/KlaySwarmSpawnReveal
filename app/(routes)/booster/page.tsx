@@ -57,7 +57,7 @@ export default function BoosterIndex() {
 
   console.log(state.allCardFlipped);
 
-  return (
+ return (
     <main className="w-full h-full flex flex-col justify-center items-center gap-3">
       <div className="flex flex-wrap gap-3 max-w-[600px] items-center justify-center">
         {state.cards.map((card) => (
@@ -68,18 +68,30 @@ export default function BoosterIndex() {
           />
         ))}
       </div>
+      {/* Removed the "Open A New Pack" button */}
       {state.allCardFlipped ? (
         <Button
           onClick={() =>
             dispatch({
-              type: "openNewPack",
+              type: "flipAllCards",
             })
           }
           disabled={!state.allCardFlipped}
         >
           Flip all cards
         </Button>
+      ) : (
+        <Button
+          onClick={() =>
+            dispatch({
+              type: "flipAllCards",
+            })
+          }
+          disabled={state.allCardFlipped}
+        >
+          Flip all cards
+        </Button>
       )}
     </main>
-  );
+ );
 }
