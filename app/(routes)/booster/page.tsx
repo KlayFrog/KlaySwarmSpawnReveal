@@ -56,26 +56,26 @@ export default function BoosterIndex() {
  const [state, dispatch] = useReducer(reducer, initialState);
 
  useEffect(() => {
-    const handleResize = () => {
-      const isPortrait = window.innerHeight > window.innerWidth;
-      const cards = document.querySelectorAll('.cardContainer');
-      cards.forEach((card) => {
-        if (isPortrait) {
-          card.style.width = '185px';
-          card.style.height = '258px';
-        } else {
-          card.style.width = '285px';
-          card.style.height = '398px';
-        }
-      });
-    };
+ const handleResize = () => {
+    const isPortrait = window.innerHeight > window.innerWidth;
+    const cards = document.querySelectorAll('.cardContainer') as NodeListOf<HTMLElement>;
+    cards.forEach((card) => {
+      if (isPortrait) {
+        card.style.width = '185px';
+        card.style.height = '258px';
+      } else {
+        card.style.width = '285px';
+        card.style.height = '398px';
+      }
+    });
+ };
 
-    window.addEventListener('resize', handleResize);
-    handleResize(); // Call once to set initial sizes
+ window.addEventListener('resize', handleResize);
+ handleResize(); // Call once to set initial sizes
 
-    // Cleanup function to remove the event listener
-    return () => window.removeEventListener('resize', handleResize);
- }, []);
+ // Cleanup function to remove the event listener
+ return () => window.removeEventListener('resize', handleResize);
+}, []);
 
  return (
     <main className="w-full h-full flex flex-col justify-center items-center gap-3">
