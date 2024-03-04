@@ -18,7 +18,7 @@ export const BoosterCard = ({ card, onFlip }: BoosterCardProps) => {
   return (
     <div
       className={cn(
-        "w-[128px] h-[93px] relative transition duration-500",
+        "w-[185px] h-[258px] relative transition duration-500",
         styles.cardContainer,
         {
           [styles.cardShowBack]: displayedSide === "back",
@@ -31,15 +31,15 @@ export const BoosterCard = ({ card, onFlip }: BoosterCardProps) => {
       <Image
         src={getCardFrontImageUrl(card)}
         alt={`Card with id ${card.id}`}
-        width={128}
-        height={93}
+        width={185}
+        height={258}
         className={cn("pixelated absolute inset-0", styles.cardFront)}
       />
       <Image
         src={getCardBackImageUrl(card)}
         alt={`Card with id ${card.id}`}
-        width={128}
-        height={93}
+        width={185}
+        height={258}
         className={cn("pixelated absolute inset-0", styles.cardBack)}
       />
     </div>

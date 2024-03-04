@@ -1,5 +1,21 @@
+# Find images of high quality
+
+Go on this website: https://pkmncards.com/sets/
+
+# Create fake cards of high quality
+
+Go on this website: [Pokécardmaker.net](https://pokecardmaker.net/creator)
+
+To help you with the correct wording of cards, you should look at already-existing cards
+
+This website will help you finding cards with effects you're trying to replicate: [pkmncards.com](https://pkmncards.com/advanced/)
+
+For images, using card images from *pkmncards.com* will automatically fill the card template on *Pokécardmaker.net*
+
+**Do not forget to credit the artist or I will come to your house and break your legs in your sleep**
+
 # Add/Change images of Swarm Pokémon:
-<sub>In this exemple, the base project has 12 images of 128x93 pixels, and you want it to hae 14 images of 200x200 pixels</sub>
+<sub>In this exemple, the base project has 12 images of 128x93 pixels, and you want it to have 14 images of 200x200 pixels</sub>
 
 Go in *public/images/cards/common*
 

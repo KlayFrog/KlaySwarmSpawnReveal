@@ -8,9 +8,11 @@
 }
 
 .cardContainer {
-  transform-style: preserve-3d;
-  transform: perspective(23rem);
-  cursor: auto;
+ transform-style: preserve-3d;
+ transform: perspective(23rem);
+ cursor: auto;
+ max-width: 285px;
+ max-height: 398px;
 }
 
 .cardContainer.cardShowBack {
