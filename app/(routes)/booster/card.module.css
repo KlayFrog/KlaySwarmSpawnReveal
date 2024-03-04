@@ -19,3 +19,19 @@
   transform: perspective(23rem) rotateY(180deg);
   cursor: pointer;
 }
+
+/* Portrait orientation */
+@media screen and (orientation: portrait) {
+ .cardContainer {
+    width: 185px;
+    height: 258px;
+ }
+}
+
+/* Landscape orientation */
+@media screen and (orientation: landscape) {
+ .cardContainer {
+    width: 285px;
+    height: 398px;
+ }
+}
